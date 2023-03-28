@@ -1,0 +1,512 @@
+/* Configurações iniciais */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+:root {
+    --color-hover: #E63946;
+    --color-body: #ffffffef;
+    --color-text: #1D3557;
+    --color-shapes: #A8DADC;
+    --color-form: #457B9D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-body);
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+
+.nav_head {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2em;
+    color: var(--color-text);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.links a:hover {
+    border-bottom: 3px solid #E63946;
+    transition: 0.1s;
+}
+
+.toggle_btn {
+    display: none;
+    color: #1D3557;
+}
+
+/* mobile menu */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .navbar .links, .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* home */ 
+
+.home {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    height: 93vh;
+}
+
+.name_som {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.home_info {
+    width: 570px;
+    font-family: 'Open Sans', sans-serif;
+    color: #1D3557; 
+}
+
+#tit {
+    font-size: 1.5em;
+}
+
+.home_info p {
+    margin-top: 4px;
+}
+
+.name_more {
+    width: 150px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #1D3557;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 3px 0px rgba(6,29,143,1);
+}
+
+.anim_btn {
+    transition-property: transform;
+    transition-duration: .1s;
+}
+
+.anim_btn:hover {
+    transform: scale(1.02);
+}
+
+.img_me {
+    background-image: url(img/1e9d6a75-d260-4bea-913e-5d6c0b4221fa-profile_image-300x300.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 450px;
+    border-radius: 7px;
+    box-shadow: 0px 3px 12px 0px rgb(32, 218, 224);
+}
+
+.angle_down {
+    position: absolute;
+    bottom: 35px;
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.angle_anim {
+    animation: angle_anim 2s ease-out alternate infinite;
+}
+
+@keyframes angle_anim {
+    to {
+        transform: translateY(20px);
+    }
+}
+
+/* SOBRE MIM */
+
+
+#retan-tit {
+    display: inline-block;
+    height: 23px;
+    width: 50px;
+    margin-right: 15px;
+    background-color: var(--color-form);
+}
+
+main h2 {
+    color: var(--color-text);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    margin: 35px 0 25px 0;
+}
+
+.about {
+    
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me {
+    margin-top: 50px;
+}
+
+.about-flx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.about-flx_img {
+    height: 200px;
+    width: 300px;
+    background-image: url(img/1e9d6a75-d260-4bea-913e-5d6c0b4221fa-profile_image-300x300.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.about-flx_text {
+    width: 800px;
+}
+
+/* habilidades */
+
+.skills {
+    margin-top: 25px;
+}
+
+.skills-flx {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills-flx h3 {
+    margin-bottom: 7px;
+}
+
+
+/* LAST POSTS */
+
+.exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.lastposts_insta {
+    height: 150px;
+    width: 300px;
+    background-color: #1D3557;
+}
+
+.lastposts_linked {
+    height: 150px;
+    width: 300px;
+    background-color: #1D3557;
+}
+
+.lastposts_linked-2 {
+    height: 150px;
+    width: 300px;
+    background-color: #1D3557;
+}
+
+/* redes sociais */
+
+.about-redscs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.instagram {
+    height: 35px;
+    width: 35px;
+    background-image: url(img/insta-icns.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.instagram:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.github {
+    height: 35px;
+    width: 35px;
+    background-image: url(img/github-icns.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.github:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.linkedin {
+    height: 35px;
+    width: 35px;
+    background-image: url(img/linkedin-icns.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.linkedin:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+/* Seção de projetos da pagina */
+
+.projetos {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos_pessoais {
+    margin-top: 50px;
+}
+
+.projetos__skills {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+
+.projetos__skills li {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-text);
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+}
+
+.projetos__skills li:hover {
+    border-bottom: 1px solid var(--color-hover);
+    margin: -1px;
+}
+
+.projetos__skills li:active {
+    border-bottom: 1px solid var(--color-hover);
+}
+
+.projetos__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 75px;
+}
+
+.projetos__item-1:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.projetos__item-1 {
+    height: 200px;
+    width: 300px;
+    background-image: url(img/SalãodeJogos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.projetos__item-1:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.projetos__item-2 {
+    height: 200px;
+    width: 300px;
+    background-image: url(img/Animezilian.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.projetos__item-2:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.projetos__item-3 {
+    height: 200px;
+    width: 300px;
+    background-image: url(img/SalãodeJogos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.projetos__item-3:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.projetos__item-4 {
+    height: 200px;
+    width: 300px;
+    background-image: url(img/Animezilian.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.projetos__item-4:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.projetos__item-5 {
+    height: 200px;
+    width: 300px;
+    background-image: url(img/SalãodeJogos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.projetos__item-5:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.projetos__item-6 {
+    height: 200px;
+    width: 300px;
+    background-image: url(img/Animezilian.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.projetos__item-6:hover {
+    transform: scale(1.2);
+    transition: .8s;
+}
+
+.projetos__item-btn {
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+    margin-top: 25px;
+    margin-right: 70px;
+}
+
+.projetos__item-btn li {
+    font-size: 2em;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.projetos__item-btn li:hover {
+    color: var(--color-hover);
+}
