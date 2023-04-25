@@ -12,7 +12,7 @@
     <header>
         <section class="nav_head" id="nav_head">
             <div class="navbar">
-                <div class="logo"><a href="#">Portfolio</a></div>
+                <div class="logo"><a href="#"><span id="logoDtq">N</span> Nycholas</a></div>
                 <ul class="links">
                     <li><a href="#nav_head">Home</a></li>
                     <li><a href="#about" target="">About</a></li>
@@ -22,19 +22,21 @@
                 <div class="toggle_btn">
                     <i class="fa-solid fa-bars"></i>
                 </div>
+                <div class="contactNavBtn">
+                    <a href="">Contact</a>
+                </div>
             </div>
             <div class="dropdown_menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#" class="action_btn">Get Started</a></li>
             </div>
         </section>
         <section class="home">
             <div class="name_som">
                 <div class="home_info">
-                    <h1 class="name_tit">My name is <br> <span id="tit">Nycholas Marques</span></h1>
+                    <h1 class="name_tit">Hello, i am <br> <span id="tit">Web developer</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sit similique. Vel, ab! Laudantium facere doloremque molestiae ab odit qui recusandae consequatur alias, obcaecati voluptas amet at, cumque suscipit praesentium?</p>
                 </div>
                 <button class="name_more anim_btn">Download CV</button>
@@ -49,14 +51,10 @@
     <main>
         <section class="about" id="about">
             <section class="about-me">
-                <h2><div id="retan-tit"></div>SOBRE MIM</h2>
-                <section class="about-flx">
-                    <div class="about-flx_img">
-                    </div>
-                    <div class="about-flx_text">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod asperiores beatae accusantium voluptate sint quibusdam nemo at labore, necessitatibus veniam eaque reiciendis illum, temporibus, numquam vero aliquam sapiente! Quo eius ut veritatis voluptate. Repellendus maiores consectetur exercitationem obcaecati atque dicta, soluta porro facere! Totam, ea dolores molestias laborum fugiat dolorum iste architecto rerum blanditiis necessitatibus, aperiam non, adipisci perferendis laudantium delectus quae? Natus facere ducimus temporibus excepturi exercitationem eveniet velit maiores iure laborum aut ullam dolore in numquam, explicabo nostrum blanditiis rerum. Molestias enim doloremque repellat quam totam quod dolores quia sequi optio, vel dignissimos cumque, sit nam consectetur cum!</p> <br>
-                    </div>
-                </section>
+                <h2><div id="retan-tit"></div>SOBRE MIM</h2>  
+                <div class="about-text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod asperiores beatae accusantium voluptate sint quibusdam nemo at labore, necessitatibus veniam eaque reiciendis illum, temporibus, numquam vero aliquam sapiente! Quo eius ut veritatis voluptate. Repellendus maiores consectetur exercitationem obcaecati atque dicta, soluta porro facere! Totam, ea dolores <br> <br> molestias laborum fugiat dolorum iste architecto rerum blanditiis necessitatibus, aperiam non, adipisci perferendis laudantium delectus quae? Natus facere ducimus temporibus excepturi exercitationem eveniet velit maiores iure laborum aut ullam dolore in numquam, explicabo nostrum blanditiis rerum. Molestias enim doloremque repellat quam totam quod dolores quia sequi optio, vel dignissimos cumque, sit nam consectetur cum!</p> <br>
+                </div>
             </section>
             <section class="skills">
                 <h2> <div id="retan-tit"></div>HABILIDADES</h2>
@@ -96,9 +94,6 @@
                 </section>
                 <section class="about-redscs">
                     <a href="#">
-                        <div class="instagram"></div>
-                    </a>
-                    <a href="#">
                         <div class="github"></div>
                     </a>
                     <a href="#">
@@ -114,34 +109,60 @@
             </div>
             <div class="projetos_pessoais">
                 <ul class="projetos__skills">
-                    <li>WEBSITES</li>
-                    <li>GAMES</li>
+                    <li class="website-skill">WEBSITES</li>
+                    <li class="games-skill">GAMES</li>
                 </ul>
-                <ul class="projetos__item">
-                    <li>
-                        <figure class="projetos__item-1"></figure>
-                    </li>
-                    <li>
-                        <figure class="projetos__item-2"></figure>
-                    </li>
-                    <li>
-                        <figure class="projetos__item-3"></figure>
-                    </li>
-                    <li>
-                        <figure class="projetos__item-4"></figure>
-                    </li>
-                    <li>
-                        <figure class="projetos__item-5"></figure>
-                    </li>
-                    <li>
-                        <figure class="projetos__item-6"></figure>
-                    </li>
-                </ul>
-                <div >
-                    <ul class="projetos__item-btn">
-                        <li><i class="fa-solid fa-less-than"></i></li>
-                        <li><i class="fa-solid fa-greater-than"></i></li>
-                    </ul>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <figure>
+                            <img src="/img/SalãodeJogos.jpg" alt="" width="400px" height="300px">
+                        </figure>
+                        <span>2023</span>
+                        <hr>
+                        <figcaption>
+                            <a href="#">
+                                <h3>Projeto loja de roupas</h3>
+                            </a>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, tempore.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In repellat at facilis doloribus odio a natus, esse deleniti sequi, et earum corporis ex tempore debitis accusantium commodi quasi minima quis ullam nihil? Accusamus ratione esse tempore tenetur veniam. Deserunt cumque nostrum quidem rem earum fuga fugiat molestias unde voluptatem minus!                      
+                        </figcaption>
+                        <button class="projectBtn">Ler mais</button>
+                    </div>
+                    <div class="project-card">
+                        <figure>
+                            <img src="/img/Animezilian.jpg" alt="" width="400px" height="300px">
+                        </figure>
+                        <span>2023</span>
+                        <hr>
+                        <figcaption>
+                            <a href="#">
+                                <h3>Projeto Animezilian</h3>
+                            </a>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, tempore.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, asperiores.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In repellat at facilis doloribus odio a natus, esse deleniti sequi, et earum corporis ex tempore debitis accusantium commodi quasi minima quis ullam nihil? Accusamus ratione esse tempore tenetur veniam. Deserunt cumque nostrum quidem rem earum fuga fugiat molestias unde voluptatem minus!
+                            
+                        </figcaption>
+                        <button class="projectBtn">Ler mais</button>
+                    </div>
+                    <div class="project-card">
+                        <figure>
+                            <img src="/img/SalãodeJogos.jpg" alt="" width="400px" height="300px">
+                        </figure>
+                        <span>2023</span>
+                        <hr>
+                        <figcaption>
+                            <a href="#">
+                                <h3>Projeto Salão de Jogos</h3>
+                            </a>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, tempore.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In repellat at facilis doloribus odio a natus, esse deleniti sequi, et earum corporis ex tempore debitis accusantium commodi quasi minima quis ullam nihil? Accusamus ratione esse tempore tenetur veniam. Deserunt cumque nostrum quidem rem earum fuga fugiat molestias unde voluptatem minus!
+                        </figcaption>
+                        <button class="projectBtn">Ler mais</button>
+                    </div>
+                </div>
+                <div class="games-projects">
+                    <h2>AINDA ESTUDANDO PARA COMEÇAR PROJETOS</h2>
                 </div>
             </div>
         </section>
@@ -172,7 +193,7 @@
             </ul>
         </section> -->
         <footer id="footer">
-            2023 &#169; Desenvolvido por<a href="#" style="margin-left: 5px;">Nycholas Marques</a>
+            <p>2023 &#169; Desenvolvido por<a href="#" style="margin-left: 5px;">Nycholas Marques</a></p>
         </footer>
     </main>
     <script src="index.js"></script>
