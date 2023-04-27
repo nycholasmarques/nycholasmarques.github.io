@@ -54,6 +54,11 @@ cardBtns.forEach((cardBtn) =>
     cardBtn.addEventListener('click', () => {
         let cardProject = cardBtn.closest('.project-card');
          cardProject.classList.toggle('active');
+         if (cardProject.classList.contains('active')) {
+            cardBtn.innerHTML = 'Ler menos';
+        } else {
+            cardBtn.innerHTML = 'Ler mais';
+            }
     }
 ))
   
